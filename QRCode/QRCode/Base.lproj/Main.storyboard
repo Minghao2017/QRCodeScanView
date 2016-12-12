@@ -21,18 +21,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8M-gd-Iez">
-                                <rect key="frame" x="172" y="319" width="31" height="30"/>
-                                <state key="normal" title="扫描"/>
-                                <connections>
-                                    <segue destination="Xyp-Yy-2eV" kind="show" id="YsC-Xu-cJo"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FA9-Jt-qwR" customClass="QRCodeScanView" customModule="QRCode" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="o8M-gd-Iez" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8hs-Vf-iAr"/>
-                            <constraint firstItem="o8M-gd-Iez" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c6J-sO-cuE"/>
+                            <constraint firstAttribute="bottom" secondItem="FA9-Jt-qwR" secondAttribute="bottom" id="VyP-5M-J4X"/>
+                            <constraint firstItem="FA9-Jt-qwR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d6w-jG-CzT"/>
+                            <constraint firstItem="FA9-Jt-qwR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vg1-iy-pIK"/>
+                            <constraint firstAttribute="trailing" secondItem="FA9-Jt-qwR" secondAttribute="trailing" id="zLh-be-plB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SdX-4c-vfo"/>
@@ -40,24 +39,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="35.532233883058474"/>
-        </scene>
-        <!--Scan View Controller-->
-        <scene sceneID="vTV-Xw-lRz">
-            <objects>
-                <viewController id="Xyp-Yy-2eV" customClass="QRScanViewController" customModule="QRCode" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kIf-O6-7Ig"/>
-                        <viewControllerLayoutGuide type="bottom" id="DWb-bG-0mr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Rbw-ri-hUA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nuv-KR-1vJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1772" y="123.68815592203899"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eq9-ZG-gmk">
